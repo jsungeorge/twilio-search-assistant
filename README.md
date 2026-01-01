@@ -25,8 +25,8 @@ To run this project locally:
 
 1.  **Clone the repo**
     ```bash
-    git clone [https://github.com/jsungeorge/sms-search-bot.git](https://github.com/jsungeorge/sms-search-bot.git)
-    cd sms-search-bot
+    git clone [https://github.com/jsungeorge/twilio-search-assistant.git](https://github.com/jsungeorge/twilio-search-assistant.git)
+    cd twilio-search-assistant
     ```
 
 2.  **Install Dependencies**
@@ -50,3 +50,4 @@ To run this project locally:
 
 ## Demo
 ![Demo Screenshot](demo.jpg)
+
