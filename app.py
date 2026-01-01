@@ -21,14 +21,13 @@ def search_google(query):
         'key': GOOGLE_API_KEY,
         'cx': SEARCH_ENGINE_ID,
         'q': query,
-        'num': 1 # We only want the top result
+        'num': 1 
     }
     
     try:
         response = requests.get(url, params=params)
         data = response.json()
 
-        # Check if we got results
         if 'items' in data:
             first_result = data['items'][0]
             title = first_result['title']
@@ -40,10 +39,10 @@ def search_google(query):
     except Exception as e:
         return f"Error searching Google: {str(e)}"
 
-# 2. The Webhook (This handles incoming texts)
+# 2. The Webhook for income texts
 @app.route('/sms', methods=['POST'])
 def sms_reply():
-    # Get the message the user sent
+    # Get msg from user
     incoming_msg = request.values.get('Body', '').strip()
     
     # Create a Twilio response object
